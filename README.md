@@ -12,3 +12,5 @@ The file test.py gives an example and simulation script. Usage is:
 O = teg_CCC.get_best_k_CCC(X)
 
 where X is a 2D array of shape N_Observations x N_Variables. The output is a dictionary with the estimate of true cluster centres (best_n) as well as the similarity score per number of clusters (scores_per_n) and the associated number of clusters (n_vec).
+
+[![DOI](https://zenodo.org/badge/631622967.svg)](https://zenodo.org/badge/latestdoi/631622967)
