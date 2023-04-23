@@ -8,6 +8,7 @@ importlib.reload(teg_CCC)
 
 plots0 = False
 n_Obs = 1000
+n_Features = 3
 noise0 = 0.5
 n_iters = 20
 results = []
@@ -15,7 +16,7 @@ for n_clusters_true in range(2, 6):
     print(n_clusters_true)
     new_row = []
     for i_iter in range(n_iters):
-        X, labels_true = make_blobs(n_samples=n_Obs, centers=n_clusters_true, random_state=0, cluster_std=noise0)
+        X, labels_true = make_blobs(n_samples=n_Obs, n_features=n_Features, centers=n_clusters_true, random_state=0, cluster_std=noise0)
         O = teg_CCC.get_best_k_CCC(X)
         best_n = O['best_n']
 
