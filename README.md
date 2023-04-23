@@ -1,6 +1,8 @@
 # teg_CCC
 Estimate the true number of clusters for k-means clustering using the Cluster Consistency Criterion (CCC).
 
+Available via pip as teg_CCC.
+
 This algorithm follows the rationale that true cluster centres should be similar in random split-halves of the data. If too maby clusters are specified, the cluster centres will become driven by random sampling error.
 
 The CCC implements this as follows. For each number of clusters, the data are split into random halves for a given number of splits (e.g., 20). For each sp0lit, a k-means cluster analysis is run on each half separately. The distances between most-similar cluster centres are summed. The similarity score is e^(-distance_sum). The mean similarity score over random splits is the score for the given number of clusters.
